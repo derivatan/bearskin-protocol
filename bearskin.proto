@@ -20,5 +20,10 @@ message VerifyRequest {
 }
 
 message VerifyResponse {
-    string claims = 2;
+    Claims claims = 1;
+}
+
+message Claims {
+    string user_id = 1;
+    repeated string permissions = 2;
 }
